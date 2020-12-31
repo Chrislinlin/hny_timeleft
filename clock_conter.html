@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="timer">
+        <button class="timer_button">20</button>
+        <button class="timer_button">5 min</button>
+        <button class="timer_button">15mins</button>
+        <button class="timer_button">20 mins</button>
+        <form type='text' id = 'custom' name ="minutes" placeholder="enter minutes"></form>
+    </div>
+    <div class="display">
+        <h1 class="display-timeleft"></h1>
+        <p class="display-endtime"></p>
+    </div>
+    <script>
+        const buttons = document.querySelectorAll('timer-button');
+        const timeLeft = document.querySelector('display-timeleft');
+        const endtime = document.querySelector('endtime');
+
+        buttons.forEach(button =>{
+            button.addEventListener('click', setime);
+        });
+        function timer(seconds){
+            const now =Date.now();
+            const then = now +seconds *1000;
+            console.log(now, then)
+            setInterval(() =>{
+                const secondsLeft = (then - Date.now(),1000
+        
+
+    </script>
+</body>
+</html>
